@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeView: UIViewController, UITableViewDataSource {
+  
     let tableView: UITableView =  {
         let table = UITableView(frame: .zero, style: .plain)
        // table.rowHeight = 200
@@ -27,8 +28,6 @@ class HomeView: UIViewController, UITableViewDataSource {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
     }
-
-
 }
 #Preview{
     HomeView()
