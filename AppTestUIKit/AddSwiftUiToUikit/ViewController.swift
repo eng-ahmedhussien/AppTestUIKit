@@ -14,10 +14,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //addSwiftUiToUIkit1()
-        addSwiftUiToUIkit2()
+        addSwiftUiToUIkit1()
     }
     
+    @IBAction func goToVCXnib(_ sender: Any) {
+        let viewController = VC()
+        viewController.modalPresentationStyle = .formSheet // Optional, set the presentation style
+        present(viewController, animated: true, completion: nil)
+    }
     func addSwiftUiToUIkit1(){
         let childView = UIHostingController(rootView: SwiftUIView())
         addChild(childView)

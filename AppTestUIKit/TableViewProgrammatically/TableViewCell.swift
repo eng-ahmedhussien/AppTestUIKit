@@ -15,7 +15,7 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        cellText.text = "asd" 
+       // cellText.text = "asd" 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

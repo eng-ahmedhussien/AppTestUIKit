@@ -8,7 +8,8 @@
 import UIKit
 
 class HomeView: UIViewController, UITableViewDataSource {
-  
+    
+    let data = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7"]
     let tableView: UITableView =  {
         let table = UITableView(frame: .zero, style: .plain)
        // table.rowHeight = 200
@@ -36,13 +37,14 @@ class HomeView: UIViewController, UITableViewDataSource {
 
 extension HomeView: UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell else {
             return UITableViewCell()
         }
+        cell.cellText.text = data[indexPath.row]
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
